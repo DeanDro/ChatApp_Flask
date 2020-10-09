@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Login to my_chat_fun{% endblock %}
+{% block styles %}
+<style>
+  #mainBox{
+    background-color: #D3D5E7;
+    border-radius: 25px;
+    max-width: 500px;
+  }
+  form{
+    margin-top: 25%;
+    margin-bottom: auto;
+    padding-top: 2%;
+  }
+  .row{
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+    display: flex;
+  }
+  #inputBox{
+    border: solid 1px grey;
+    background-color: white;
+    border-radius: 25px;
+  }
+  #submitButton{
+    margin: 2%;
+    font-weight: bold;
+    border-radius: 15px;
+  }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container text-center" id="mainBox">
+  <form method="POST" action="chatrooms">
+      <div class="form-group row">
+        <label for="username" class="col-md-3 col-form-label">Username:</label>
+        <div class="col">
+          <input id="inputBox" type="text" name="username" class="form-control-plaintext"/>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="password" class="col-md-3 col-form-label">Password:</label>
+        <div class="col">
+          <input id="inputBox" type="text" name="password" class="form-control-plaintext"/>
+        </div>
+      </div>
+      <div id="submitBlock">
+        <input id="submitButton" class="btn-primary btn" type="submit" value="Login">
+      </div>
+  </form>
+</div>
+{% endblock %}
